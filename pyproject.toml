@@ -17,6 +17,9 @@ dependencies = [
     "httpx>=0.27.0",
 ]
 
+[project.optional-dependencies]
+dev = ["setuptools>=61.0", "wheel"]
+
 [project.scripts]
 tradingagents-web = "tradingagents_webui.main:main"
 
@@ -25,3 +28,6 @@ include = ["tradingagents_webui*"]
 
 [tool.setuptools.package-data]
 tradingagents_webui = ["static/*"]
+
+[tool.pipx]
+unit = "run"
